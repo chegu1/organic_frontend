@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import ReactPaginate from 'react-paginate';
+import List from './components/List'
 import './App.css';
 
 function App() {
@@ -33,9 +34,9 @@ function App() {
   };
   return (
     <div className="App">
-      <div className="list-items">
-        {data}
-      </div>
+
+      <List data={data} />
+
       <ReactPaginate
         previousLabel={"prev"}
         nextLabel={"next"}
